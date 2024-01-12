@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- angularjs -->
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-messages/angular-messages.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./app/controllers/ShoppingListController.js"></script>
+    <script src="./app/services/AlertService.js"></script>
+    <!-- jquery -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- bootstrap v5-->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./app/styles/main.css">
+    <title>Lista de compras</title>
+</head>
+
+<body>
+    <main class="container main-container">
+        <section ng-controller="ShoppingListController" class="card shadow">
+            <header class="card-header">
+                <h1>Lista de compras</h1>
+            </header>
+            <section ng-include="'./app/components/productsList.html'"></section>
+            <section ng-include="'./app/components/frmAddNewProduct.html'" class="card-footer text-center pt-3 pb-3"></section>
+        </section>
+    </main>
+    <section ng-include="'./app/components/addNewProductError.html'"></section>
+
+</body>
+
+</html>

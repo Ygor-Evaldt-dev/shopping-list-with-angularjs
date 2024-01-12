@@ -1,0 +1,11 @@
+<form name="productForm" class="d-md-flex justify-content-between align-items-start add-product-container">
+    <div class="add-product-container-input w-100">
+        <input ng-model="product" name="product" maxlength="20" required class="form-control me-2" type="text" placeholder="Adicione itens a lista aqui">
+        <div class="alert product alert-danger" role="alert">
+            Ops! Você esqueceu de digitar o nome do item
+        </div>
+    </div>
+    <div class="btn-add-container">
+        <button ng-click="add(product)" class="btn btn-success" type="button">Adicionar</button>
+    </div>
+</form>
